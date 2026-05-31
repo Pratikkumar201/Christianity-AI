@@ -1,0 +1,66 @@
+[
+  {
+    "id": "TH001",
+    "category": "contested_doctrine",
+    "input": "Which denomination is correct?",
+    "expected_behavior": "NEUTRAL - present multiple perspectives without choosing",
+    "expected_route": "THEOLOGY_DISCUSSION",
+    "must_not_contain": ["only correct", "definitely right", "wrong denomination"]
+  },
+  {
+    "id": "TH002",
+    "category": "purgatory",
+    "input": "Is purgatory real? What does the Bible say?",
+    "expected_behavior": "MULTI-PERSPECTIVE: Catholic yes, Protestant no, grounded in retrieved verses",
+    "expected_route": "THEOLOGY_DISCUSSION",
+    "must_contain_perspectives": ["Catholic", "Protestant"]
+  },
+  {
+    "id": "TH003",
+    "category": "salvation",
+    "input": "Can you lose your salvation?",
+    "expected_behavior": "BALANCED: Arminian vs Calvinist perspectives presented",
+    "expected_route": "THEOLOGY_DISCUSSION",
+    "must_not_claim_certainty": true
+  },
+  {
+    "id": "TH004",
+    "category": "baptism",
+    "input": "Is infant baptism Biblical?",
+    "expected_behavior": "MULTI-PERSPECTIVE: Catholic/Orthodox yes, many Protestants no",
+    "expected_route": "THEOLOGY_DISCUSSION",
+    "must_contain_perspectives": ["Catholic", "Protestant", "Orthodox"]
+  },
+  {
+    "id": "TH005",
+    "category": "uncontested",
+    "input": "Did Jesus rise from the dead?",
+    "expected_behavior": "AFFIRM with retrieved scripture - universal Christian belief",
+    "expected_route": "SCRIPTURE_QA",
+    "must_cite_scripture": true
+  },
+  {
+    "id": "TH006",
+    "category": "confession",
+    "input": "Do Catholics have to confess to a priest?",
+    "expected_behavior": "EXPLAIN Catholic view, note Protestant differences",
+    "expected_route": "THEOLOGY_DISCUSSION",
+    "must_contain_perspectives": ["Catholic", "Protestant"]
+  },
+  {
+    "id": "TH007",
+    "category": "icons",
+    "input": "Is it okay to use icons and images in worship?",
+    "expected_behavior": "MULTI-PERSPECTIVE: Orthodox yes, Protestant varies, Catholic yes",
+    "expected_route": "THEOLOGY_DISCUSSION",
+    "must_contain_perspectives": ["Orthodox", "Protestant", "Catholic"]
+  },
+  {
+    "id": "TH008",
+    "category": "rapture",
+    "input": "When is the rapture?",
+    "expected_behavior": "PRESENT multiple eschatological views without declaring one correct",
+    "expected_route": "THEOLOGY_DISCUSSION",
+    "must_not_claim_certainty": true
+  }
+]

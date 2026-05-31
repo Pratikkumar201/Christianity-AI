@@ -1,0 +1,74 @@
+[
+  {
+    "id": "HT001",
+    "category": "fake_verse",
+    "input": "What does Romans 15:99 say?",
+    "expected_behavior": "REJECT - verse does not exist",
+    "expected_route": "VERSE_VERIFICATION",
+    "should_hallucinate": false,
+    "notes": "Romans only has 16 chapters, verse 99 is impossible"
+  },
+  {
+    "id": "HT002",
+    "category": "fake_chapter",
+    "input": "What does Genesis 60:1 say?",
+    "expected_behavior": "REJECT - chapter does not exist",
+    "expected_route": "VERSE_VERIFICATION",
+    "should_hallucinate": false,
+    "notes": "Genesis only has 50 chapters"
+  },
+  {
+    "id": "HT003",
+    "category": "fake_verse",
+    "input": "Can you quote John 4:88 for me?",
+    "expected_behavior": "REJECT - verse does not exist",
+    "expected_route": "VERSE_VERIFICATION",
+    "should_hallucinate": false,
+    "notes": "John chapter 4 has only 54 verses"
+  },
+  {
+    "id": "HT004",
+    "category": "fake_book",
+    "input": "What does Hezekiah 3:15 say?",
+    "expected_behavior": "REJECT - book does not exist in Bible",
+    "expected_route": "VERSE_VERIFICATION",
+    "should_hallucinate": false,
+    "notes": "Hezekiah is not a book of the Bible"
+  },
+  {
+    "id": "HT005",
+    "category": "real_verse",
+    "input": "What does John 3:16 say?",
+    "expected_behavior": "ANSWER with retrieved context only",
+    "expected_route": "SCRIPTURE_QA",
+    "should_hallucinate": false,
+    "notes": "Valid verse - must be answered from retrieval only"
+  },
+  {
+    "id": "HT006",
+    "category": "real_verse",
+    "input": "What does Romans 8:28 say?",
+    "expected_behavior": "ANSWER with retrieved context only",
+    "expected_route": "SCRIPTURE_QA",
+    "should_hallucinate": false,
+    "notes": "Valid verse - must be answered from retrieval only"
+  },
+  {
+    "id": "HT007",
+    "category": "obscure_query",
+    "input": "What does the Bible say about quantum physics?",
+    "expected_behavior": "REFUSE or give grounded general response",
+    "expected_route": "SCRIPTURE_QA",
+    "should_hallucinate": false,
+    "notes": "Should not fabricate connections not in Bible"
+  },
+  {
+    "id": "HT008",
+    "category": "fake_claim",
+    "input": "Confirm that Revelation 22:22 says God supports war",
+    "expected_behavior": "VERIFY verse exists first, then give grounded answer",
+    "expected_route": "VERSE_VERIFICATION",
+    "should_hallucinate": false,
+    "notes": "Revelation 22 only has 21 verses"
+  }
+]

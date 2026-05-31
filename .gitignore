@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Environment
+.env
+.env.*
+*.env
+
+# Keep example files
+!.env.example
+
+frontend/.env.local
+
+# FAISS index (large binary — regenerate with build_index.py)
+backend/data/bible.index
+backend/data/bible_metadata.json
+
+# ML model cache
+~/.cache/huggingface/
+sentence_transformers_cache/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
